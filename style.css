@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+   
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 100%; /* left container width */
+    height: 100vh; /* Adjust height as needed */
+    /* Just for visualization */
+}
+
+.left-container {
+    position: absolute;
+    z-index: 1000;
+    background-color: rgb(180, 231, 248); /* Example background color */
+    width: 100%; 
+    height: 100vh;
+    float: left;/* Occupy full width of .container */
+}
+
+.right-container {
+    position: absolute;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    background-color: #8eca8e; /* Example background color */
+    width: 45%;
+    height: 100vh;
+    border-bottom-left-radius: 100%;
+    float: right; /* right container width */
+}
+
+.overlay-main-container {
+    position: absolute;
+    z-index: 3000;
+    right: 4%;
+    width: 88%;
+    height: 87vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248, 248, 229);
+    border-radius: 10px;
+}
+
+.overlay-left-container {
+position: absolute;
+z-index: 4000;
+right: 0;
+width: 47%;
+height: 87vh;
+background: #9fe19f;
+border-bottom-left-radius: 90% ;
+}
+
+.overlay-left {
+    position: absolute;
+    top:0;
+    right: 0;
+    height: 87vh;
+    width: 4.5%;
+    display: flex;
+    z-index: 5000;
+    background-color: aqua;
+}
+.overlay-left h1 {
+display: flex;
+height: 87vh;
+margin-right: 8px;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 6000;
+    writing-mode: vertical-rl; /* Vertical writing mode */
+    transform: rotate(360deg); /* Rotate the text */
+    transform-origin: bottom left; /* Rotate from the bottom left corner */
+    position: absolute; /* Position the text within the div */
+    word-spacing: 3cm;
+    color: rgb(68, 107, 141);
+   
+}
+.upper-ball {
+    position: absolute;
+    top: -4%;
+    right: 30%;
+    z-index: 8000;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(141, 212, 141);
+    box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.3); /* Add box shadow */
+    animation: moveLeftAndRight 15s infinite alternate; /* Animation */
+    transition: transform 1s ease-in-out; /* Smooth transition */
+}
+
+@keyframes moveLeftAndRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-308px); /* Move left */
+    }
+    100% {
+        transform: translateX(0px); /* Return to original position */
+    }
+}
+
+
+
+.left-ball {
+    position: absolute;
+    top: 45%;
+    left: -7%;
+    z-index: 8000;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: lightblue;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3); /* Add box shadow */
+    animation: moveUpAndDown 15s infinite alternate; /* Animation */
+    transition: transform 1s ease-in-out; /* Smooth transition */
+}
+
+@keyframes moveUpAndDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-108px); /* Move upward */
+    }
+    100% {
+        transform: translateY(90px);
+    }
+}
+
+
+.logo-container{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+   
+    z-index: 7000;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .logo-left {
+    margin-top: 17px;
+  margin-left: 5px;
+  }
+  .logo-right {
+   
+    margin-top: 10px;
+  margin-right: 70px;
+  
+  }
+  .logo-right img {
+    float: right;
+  
+
+  max-width: 180px;
+  height: auto;
+  }
+  
+   .logo-left img {
+    max-width: 180px;
+    height: auto;
+  }
+  
+.design-with-text {
+    position: relative;
+     z-index: 8000;
+    top: 50%;
+    /* text-decoration: underline; */
+    transform: translateY(-50%);
+    left: 10%;
+    width: 40%;
+    color: rgb(8, 134, 184); /* Adjust text color as needed */
+   
+  }
+  
+  .design-with-text hr {
+    border: 0;
+    height: 4px; /* Adjust thickness as needed */
+    background-color: rgb(8, 134, 184); /* Adjust color as needed */
+    z-index: 8000;
+    width: 15%; /* Adjust width as needed */
+    margin: 5px 0; /* Adjust spacing as needed */
+  }
+  
+  .design-with-text h1 {
+    font-weight: 700;
+    letter-spacing: 0.5cm;
+}
+  .design-with-text h2 {
+  margin-top: 20px;
+    font-size: 20px;
+  
+    font-weight: 500;
+    text-align: justify;
+  }
+
+  .user-image {
+    position: absolute;
+    top: 18%;
+    right: -4%;
+    width: 50%;
+    height: 60vh;
+    z-index: 8000;
+  }
+  
+  .user-image img {
+    max-width: 580px;
+    height: auto;
+  }
+  
+  
+  
